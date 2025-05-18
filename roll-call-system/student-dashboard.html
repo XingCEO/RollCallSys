@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>學生主頁面 - 地獄部隊點名系統</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #f1c40f;
+        }
+        main {
+            padding: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .welcome {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            font-weight: 700;
+            border-left: 5px solid #3498db;
+            padding-left: 15px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(52, 152, 219, 0.2);
+            backdrop-filter: blur(5px);
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .card h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+        .card p {
+            color: #7f8c8d;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+        .card a {
+            display: inline-block;
+            color: #3498db;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 50px;
+            transition: background-color 0.3s, color 0.3s;
+            border: 1px solid #3498db;
+        }
+        .card a:hover {
+            background-color: #3498db;
+            color: white;
+        }
+        .icon {
+            margin-right: 10px;
+            font-size: 16px;
+        }
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>學生主頁面 - 地獄部隊點名系統</h1>
+            <nav>
+                <a href="index.html">登出</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="welcome">
+            <h2>歡迎，學生</h2>
+            <p>您已成功登入地獄部隊點名系統，請選擇以下功能進行操作。</p>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <h3><i class="fas fa-check-circle icon"></i>查看個人點名狀態</h3>
+                <p>查看您的出缺席狀態和歷史記錄，了解您的出席情況和相關詳情。</p>
+                <a href="#">前往</a>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-file-alt icon"></i>提交報導</h3>
+                <p>提交相關報導或說明，用於特殊情況的記錄或申訴。</p>
+                <a href="#">前往</a>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-calendar-times icon"></i>申請請假</h3>
+                <p>提交請假申請，填寫相關資訊以便教師審核。</p>
+                <a href="#">前往</a>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-question-circle icon"></i>提出出缺席疑慮</h3>
+                <p>對出缺席記錄提出疑慮或申訴，可標注特定日期進行說明。</p>
+                <a href="#">前往</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 地獄部隊點名系統. 版權所有.</p>
+    </footer>
+</body>
+</html>

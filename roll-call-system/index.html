@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地獄部隊點名系統</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #333;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            max-width: 600px;
+            width: 90%;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        p {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        a:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 5px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.5);
+            opacity: 0;
+            border-radius: 100%;
+            transform: scale(1, 1) translate(-50%);
+            transform-origin: 50% 50%;
+        }
+        a:focus:not(:active)::after {
+            animation: ripple 1s ease-out;
+        }
+        @keyframes ripple {
+            20% {
+                transform: scale(25, 25);
+                opacity: 0.3;
+            }
+            100% {
+                opacity: 0;
+                transform: scale(40, 40);
+            }
+        }
+        .student {
+            background-color: #3498db;
+        }
+        .student:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px);
+        }
+        .teacher {
+            background-color: #2ecc71;
+        }
+        .teacher:hover {
+            background-color: #27ae60;
+            transform: translateY(-3px);
+        }
+        .admin {
+            background-color: #e74c3c;
+        }
+        .admin:hover {
+            background-color: #c0392b;
+            transform: translateY(-3px);
+        }
+    </style>
+    <script>
+        function simulateLogin(role) {
+            alert(`您已以${role}身份登入系統`);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>地獄部隊點名系統</h1>
+        <p>歡迎使用點名系統，請選擇您的角色以繼續</p>
+        <div class="buttons">
+            <a href="student-dashboard.html" class="student" onclick="simulateLogin('學生')">學生</a>
+            <a href="teacher-dashboard.html" class="teacher" onclick="simulateLogin('教師')">教師</a>
+            <a href="admin-dashboard.html" class="admin" onclick="simulateLogin('管理者')">管理者</a>
+        </div>
+    </div>
+</body>
+</html>
