@@ -57,7 +57,7 @@ graph TD
 專案將採用React框架的標準目錄結構，方便管理和開發：
 
 - **/roll-call-system**：專案根目錄
-  - **/src**：存放原始碼
+  - **/app**：存放原始碼
     - **/components**：React組件
     - **/pages**：頁面檔案
     - **/styles**：CSS樣式檔案
