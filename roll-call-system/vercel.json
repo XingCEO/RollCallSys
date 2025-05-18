@@ -9,10 +9,6 @@
       }
     },
     {
-      "src": "public/**",
-      "use": "@vercel/static"
-    },
-    {
       "src": "roll-call-system/*.html",
       "use": "@vercel/static"
     }
@@ -20,11 +16,11 @@
   "routes": [
     {
       "src": "/(login|student-dashboard|teacher-dashboard|admin-dashboard)\\.html",
-      "dest": "/$1.html"
+      "dest": "/roll-call-system/$1.html"
     },
     {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "/roll-call-system/login.html"
     }
   ]
 }
