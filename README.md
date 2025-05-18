@@ -60,8 +60,12 @@ graph TD
   - **/app**：存放原始碼
     - **/components**：React組件
     - **/pages**：頁面檔案
+      - **StudentDashboard.tsx**：學生主頁面
+      - **TeacherDashboard.tsx**：教師主頁面
+      - **AdminDashboard.tsx**：系統管理者主頁面
     - **/styles**：CSS樣式檔案
     - **/utils**：工具函數
+      - **GmailAuth.tsx**：Gmail認證功能相關檔案
     - **/api**：後端API接口
   - **/public**：靜態資源
     - **/images**：圖片檔案
