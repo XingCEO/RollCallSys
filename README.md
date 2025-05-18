@@ -54,17 +54,21 @@ graph TD
 6. **登出**：所有角色均可從各自的主頁面登出系統。
 
 ## 專案結構規劃
-專案將採用以下目錄結構，方便管理和開發：
+專案將採用React框架的標準目錄結構，方便管理和開發：
 
-- **/src**：存放原始碼
-  - **/components**：React組件
-  - **/pages**：頁面檔案
-  - **/styles**：CSS樣式檔案
-  - **/utils**：工具函數
-  - **/api**：後端API接口
-- **/public**：靜態資源
-  - **/images**：圖片檔案
-  - **/fonts**：字型檔案
+- **/roll-call-system**：專案根目錄
+  - **/src**：存放原始碼
+    - **/components**：React組件
+    - **/pages**：頁面檔案
+    - **/styles**：CSS樣式檔案
+    - **/utils**：工具函數
+    - **/api**：後端API接口
+  - **/public**：靜態資源
+    - **/images**：圖片檔案
+    - **/fonts**：字型檔案
+  - **/package.json**：專案依賴和腳本
+  - **/index.js**：應用程式入口點
+  - **/App.js**：主要應用程式組件
 - **/docs**：文件資料
 - **/tests**：測試檔案
 
